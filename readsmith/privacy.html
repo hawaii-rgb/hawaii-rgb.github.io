@@ -13,7 +13,9 @@
      content.dropboxapi.com, 2026-10-30), 사용자가 입력한 WebDAV 서버, 고른 폴더 — 와 책 속 링크를 사용자가 눌렀을 때
      기본 브라우저로 여는 것.
      구글 «브랜드 검증»은 처리방침이 Google 사용자 데이터의 접근·사용·저장·공유를 밝히기를 요구한다(Brand verification 문서). 책 본문 화면(WKWebView)은 바깥 주소를 막는다(WebReader.blockNetwork).
-     낭독은 기기 안 모델로 만들고 소리를 저장하지 않는다. 기능이 바뀌면 이 문서와 App Store 개인정보 설문을 함께 고친다.
+     낭독은 기기 안 모델(ReadSmith AI)로 만들거나, 사용자가 고르면 기기의 Apple 음성 합성(AVSpeechSynthesizer)에 글을 넘긴다. 소리는 저장하지 않는다.
+     Apple 쪽이 기기 안에서만 처리하는지는 애플 문서에 없어 단정하지 않는다(2026-11-13 — 합성 확장 MauiAUSP 는 네트워크 권한 없음, 맥 1회 측정 통신 없음이지만 증명 아님).
+     기능이 바뀌면 이 문서와 App Store 개인정보 설문을 함께 고친다.
      2026-11-12: 문의 메일 단락 — support@jwbstudio.app(Cloudflare Email Routing → jwbstudio.support@gmail.com), 보관 마지막 답장 뒤 1년(사용자 결정),
      Gmail 국외 보관, 보호책임자 = JWB Studio 고객지원(개인정보보호법 제30조·시행령 제31조, 소상공인은 대표자 본인). -->
 <header>
@@ -33,7 +35,7 @@
        개발자가 운영하는 서버가 없고, 계정도 없고, 사용 기록도 모으지 않습니다.
        책과 기록은 기기 안에, 그리고 사용자가 고른 클라우드(본인의 iCloud · Google Drive · Dropbox · WebDAV 서버)에만 저장됩니다.</p>
   </div>
-  <p class="dim">시행일 2026년 11월 12일</p>
+  <p class="dim">시행일 2026년 11월 13일</p>
 
   <h2>모으지 않는 것</h2>
   <ul>
@@ -86,8 +88,10 @@
   <p>앱을 지우면 기기 안의 항목은 운영체제가 앱 저장 공간과 함께 지웁니다.</p>
 
   <h2>소리로 읽기</h2>
-  <p>목소리는 <b>기기 안에서</b> 만들어집니다. 글을 바깥으로 보내지 않고, 만든 소리를 저장하지도 않습니다.
-     목소리는 AI로 만든 음성입니다.</p>
+  <p>목소리는 두 가지입니다. <b>ReadSmith AI 목소리</b>는 앱에 든 모델로 <b>기기 안에서</b> 만들며, AI로 만든 음성입니다.
+     <b>Apple 목소리</b>를 고르면 글을 기기의 Apple 음성 합성 기능에 넘겨 소리를 만듭니다.
+     어느 쪽이든 ReadSmith는 글을 바깥으로 보내지 않고, 만든 소리를 저장하지 않습니다.
+     Apple 목소리를 받고 쓰는 일은 Apple의 개인정보 처리방침을 따릅니다.</p>
 
   <h2>책 속 링크</h2>
   <p>책 본문 화면은 바깥 인터넷 주소를 불러오지 않습니다. 책 속 링크를 직접 누르시면
@@ -120,7 +124,7 @@
        There is no developer-run server, no account, and no usage is collected.
        Your books and records are kept on your device and only in the clouds you choose (your own iCloud, Google Drive, Dropbox, or WebDAV server).</p>
   </div>
-  <p class="dim">Effective 12 November 2026</p>
+  <p class="dim">Effective 13 November 2026</p>
 
   <h2>What is not collected</h2>
   <ul>
@@ -173,8 +177,10 @@
   <p>Deleting the app removes the on-device items along with its storage.</p>
 
   <h2>Read Aloud</h2>
-  <p>Voices are generated <b>on your device</b>. Text is never sent anywhere, and the audio is not saved.
-     The voices are AI-generated.</p>
+  <p>There are two kinds of voices. <b>ReadSmith AI voices</b> are generated <b>on your device</b> by a model included in the app, and they are AI-generated.
+     If you choose an <b>Apple voice</b>, the text is passed to your device's Apple speech synthesis to produce the audio.
+     Either way, ReadSmith does not send the text anywhere and does not save the audio.
+     Downloading and using Apple voices is governed by Apple's privacy policy.</p>
 
   <h2>Links in books</h2>
   <p>The book view does not load addresses from the internet. When you tap a link in a book,
